@@ -51,14 +51,34 @@ header {
         outline:0;
         cursor:pointer;
     }
+
+    & .address, .phone {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+        @media screen and (max-width:1000px) {
+         display:none;   
+        }
+    }
 }
+
+.address, .phone, .email {
+    display: flex;
+    gap: 5px;
+    align-items:center ;
+}
+
 .logo {
     flex-grow: 1;
+    
     & a{
         display:flex;
         align-items: center;
         gap:10px;
         text-decoration: none;
+        color:white;
 
         & h1 {
             
@@ -79,18 +99,7 @@ header {
     }
 }
 
-.address, .phone {
-    display: flex;
-    gap: 5px;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: white;
-    @media screen and (max-width:1000px) {
-     display:none;   
-    }
-}
+
 .address::before {
     content: '';
     display: block;
@@ -367,7 +376,51 @@ nav {
     display: flex;
     gap:5px;
 }
+.footer {
+    display:flex;
+    gap:50px;
+    align-items:flex-start;
+    margin-top: 50px;
+    margin-bottom: 50px;
 
+    & ul {
+        list-style: none;
+    }
+
+    & li {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px
+    }
+    
+    & .phone::before {
+        content: '';
+        display: block;
+        background: url('../images/phone-black.svg') no-repeat;
+        width:13px;
+        height:13px;
+    }
+    & .email::before {
+        content: '';
+        display: block;
+        background: url('../images/email.svg') no-repeat;
+        width:15px;
+        height:12px;
+    }
+    & .address::before {
+        content: '';
+        display: block;
+        background: url('../images/location-black.svg') no-repeat;
+        width:13px;
+        height:17px;
+    }
+}
+.footer-logo {
+    color:$dark-blue;
+    width:138px;
+    height:98px;
+}
 .hidden {
     display:none;
 }
