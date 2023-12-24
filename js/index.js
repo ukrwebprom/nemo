@@ -4,9 +4,7 @@ const stripe = document.querySelector('#stripe');
 const Img = document.querySelector('#bigimg');
 let activeImg = 0;
 
-menuBtn.onclick = () => {
-    nav.classList.toggle('hidden');
-};
+
 
 const galleryContent = [
     "1.jpg",
@@ -35,4 +33,9 @@ const createPreviews = () => {
         stripe.appendChild(newPreview);
     })
 }
-document.body.onload = createPreviews;
+document.body.onload = () => {
+    menuBtn.onclick = () => {
+        nav.classList.toggle('hidden');
+    };
+    createPreviews();
+}
