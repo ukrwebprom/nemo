@@ -3,6 +3,7 @@ body, p, h1, h2, h3, h4, ul, a {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 p {
@@ -121,6 +122,24 @@ header .address, header .phone {
   color: rgba(255, 255, 255, 0.5);
 }
 
+nav {
+  position: absolute;
+  right: 0px;
+  top: 76px;
+  transform: translateX(400px);
+  transition: transform 0.4s ease-in-out;
+}
+nav.hide {
+  transform: translateX(0px);
+}
+
+.mainmenu {
+  background-color: #0B5483;
+  padding: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
 .hero {
   display: flex;
   justify-content: flex-end;
@@ -164,12 +183,6 @@ header .address, header .phone {
   .hero-text {
     font-size: 11px;
   }
-}
-
-nav {
-  position: absolute;
-  top: 75px;
-  right: 20px;
 }
 
 .container {
@@ -387,6 +400,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .previews {

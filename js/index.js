@@ -35,7 +35,7 @@ const createPreviews = () => {
 }
 document.body.onload = () => {
     menuBtn.onclick = () => {
-        nav.classList.toggle('hidden');
+        nav.classList.toggle('hide');
     };
     createPreviews();
 }

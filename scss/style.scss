@@ -6,6 +6,7 @@ body, p, h1, h2, h3, h4, ul, a {
     padding:0;
     margin:0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 p {
@@ -128,6 +129,24 @@ header {
     }
 }
 
+nav {
+    position:absolute;
+    right:0px;
+    top:76px;
+    transform: translateX(400px);
+    transition: transform  0.4s ease-in-out;
+    &.hide {
+        transform: translateX(0px);
+        
+    }
+}
+
+.mainmenu {
+    background-color: $dark-blue;
+    padding:20px;
+    color:white;
+    text-transform: uppercase;
+}
 .hero {
     display: flex;
     justify-content: flex-end;
@@ -171,11 +190,7 @@ header {
     }
 }
 
-nav {
-    position: absolute;
-    top:75px;
-    right:20px;
-}
+
 
 .container {
     width:1024px;
@@ -363,6 +378,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     @media screen and (max-width:768px) {
         bottom:-112px;
         background: transparent;
