@@ -343,9 +343,12 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+/*     overflow: hidden; */
     /* filter: blur(1.5rem); */
     position:relative;
+    @media screen and (max-width:768px) {
+        margin-bottom:150px;
+    }
 }
 #bigimg {
     max-height:100%;
@@ -360,6 +363,10 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width:768px) {
+        bottom:-112px;
+        background: transparent;
+    }
 }
 .preview {
     width:110px;
@@ -368,6 +375,10 @@ nav {
     background-size: cover;
     background-position: center;
     cursor:pointer;
+    @media screen and (max-width:768px) {
+        width:80px;
+        height:80px;
+    }
 }
 .active {
     border:2px solid rgba(255, 255, 255, 0.5);
@@ -383,6 +394,30 @@ nav {
     margin-top: 50px;
     margin-bottom: 50px;
 
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+    }
+
+    &>:last-child {
+        text-align: right;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        @media screen and (max-width:768px) {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap:15px;
+        }
+        @media screen and (max-width:400px) {
+            flex-direction:column;
+        }
+        & p {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 18px;
+        }
+    }
     & ul {
         list-style: none;
     }
@@ -420,6 +455,15 @@ nav {
     color:$dark-blue;
     width:138px;
     height:98px;
+}
+.social-list {
+    display:flex;
+    gap:6px;
+    justify-content: flex-end;
+    margin-top: 14px;
+    @media screen and (max-width:768px) {
+        margin-top: 0px;
+    }
 }
 .hidden {
     display:none;

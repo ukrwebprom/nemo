@@ -363,9 +363,14 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  /*     overflow: hidden; */
   /* filter: blur(1.5rem); */
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  #imgcontainer {
+    margin-bottom: 150px;
+  }
 }
 
 #bigimg {
@@ -383,6 +388,12 @@ nav {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .previews {
+    bottom: -112px;
+    background: transparent;
+  }
+}
 
 .preview {
   width: 110px;
@@ -391,6 +402,12 @@ nav {
   background-size: cover;
   background-position: center;
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .preview {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .active {
@@ -408,6 +425,35 @@ nav {
   align-items: flex-start;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+}
+.footer > :last-child {
+  text-align: right;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .footer > :last-child {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .footer > :last-child {
+    flex-direction: column;
+  }
+}
+.footer > :last-child p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 18px;
 }
 .footer ul {
   list-style: none;
@@ -444,6 +490,18 @@ nav {
   color: #0B5483;
   width: 138px;
   height: 98px;
+}
+
+.social-list {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
+@media screen and (max-width: 768px) {
+  .social-list {
+    margin-top: 0px;
+  }
 }
 
 .hidden {
