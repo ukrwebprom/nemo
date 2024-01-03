@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const menuBtn = document.querySelector('#menu');
 const nav = document.querySelector('nav');
 const stripe = document.querySelector('#stripe');
@@ -36,6 +37,8 @@ const createPreviews = () => {
 document.body.onload = () => {
     menuBtn.onclick = () => {
         nav.classList.toggle('hide');
+        menuBtn.classList.toggle('close');
+        body.classList.toggle('modal-open');
     };
     createPreviews();
 }
